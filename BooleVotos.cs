@@ -19,12 +19,12 @@ namespace BooleVotos
             double p = double.Parse(Console.ReadLine());
 
             int tv = a + b + blancos + anulados;
-            int an = 0.3 * (a + b);
-            int pme = n * (p / 100);
+            int an = (int) (0.3 * (a + b));
+            int pme = (int)(n * (p / 100));
             int abs = pme - tv;
 
 
-            if ( anulados < an || (a+b) > blancos && abs < tv){
+            if ( (anulados < an || (a+b) > blancos) && (abs < tv)){
                 Console.WriteLine("Las votaciones fueron exitosas");
 
                 if (a > b)
