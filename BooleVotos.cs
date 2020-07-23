@@ -19,9 +19,9 @@ namespace BooleVotos
             double p = double.Parse(Console.ReadLine());
 
             int tv = a + b + blancos + anulados;
-            double an = 0.3 * (a + b);
-            double pme = n * (p / 100);
-            double abs = pme - tv;
+            int an = 0.3 * (a + b);
+            int pme = n * (p / 100);
+            int abs = pme - tv;
 
 
             if ( anulados < an || (a+b) > blancos && abs < tv){
