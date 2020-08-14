@@ -53,8 +53,9 @@ namespace BlackJackMulti
                     {
                         Console.WriteLine("Ganaste");
                         ganador = n;
+                        break;
                     }
-                    else if (total > mayor)
+                    else if (total > mayor && total <= 21)
                     {
                         mayor = total;
                         ganador = n;
