@@ -5,14 +5,13 @@ namespace Matrices
     class Program
     {
         static void Main(string[] args)
-        {
-            Random random = new Random();
+        {Random random = new Random();
             string[] valores = { "-", "-", "O", "X" };
             int n = 10;
             int m = 15;
             double xs = 0;
             double os = 0;
-            double slash = 0;
+            double guions = 0;
 
             string[,] tablero = new string[n, m];
             string[,] salida = new string[n, m];
@@ -104,15 +103,15 @@ namespace Matrices
 
                     if (tablero[i, j] == "-")
                     {
-                        slash++;
+                        guions++;
                     }
                 }
             }
 
-            double total = os + slash + xs;
+            double total = os + guions + xs;
             double porcentajeXs = (xs / total) * 100;
             double porcentajeOs = (os / total) * 100;
-            double porcentajeSlash = (slash / total) * 100;
+            double porcentajeGuions = (guions / total) * 100;
 
             //SALIDA
             Console.WriteLine("\nSALIDA: ");
@@ -128,7 +127,7 @@ namespace Matrices
 
             Console.WriteLine("Porcentaje de X:  " + porcentajeXs + "%");
             Console.WriteLine("Porcentaje de O:  " + porcentajeOs + "%");
-            Console.WriteLine("Porcentaje de -:  " + porcentajeSlash + "%");
+            Console.WriteLine("Porcentaje de -:  " + porcentajeGuions + "%");
         }
     }
 }
